@@ -1,0 +1,17 @@
+Date: September 11, 2018
+
+Running Main_MonteCarlo_pond.m
+
+type_sum = 1
+
+improved P, ws
+
+beta = 10^(-3);                  % scale down so LP CVX solver works for large m
+
+gx = x - 5; % one-sided signed distance since we only care about overflowing and x will never be <0
+
+m = 10;                                 % soft-max parameter
+
+nt = 100000;                                                        % number of trials per grid point
+
+~N(0, small_sd = 10^(-7)), add small Gaussian noise 

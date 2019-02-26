@@ -1,0 +1,7 @@
+signed distance: g(x) = x - 5 
+
+stage cost = beta * exp(m*g(x))
+
+beta = 10^(-6)
+
+m = 10

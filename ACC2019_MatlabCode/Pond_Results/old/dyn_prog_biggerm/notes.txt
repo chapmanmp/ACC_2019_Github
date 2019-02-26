@@ -1,0 +1,13 @@
+Date: September 10, 2018
+
+Running Main_DynProgram_Pond.m
+
+getProbDist.m : sdpt3 solver
+
+maxExp_pond.m : mosek solver
+
+m = 15;                                 % soft-max parameter
+
+beta = 10^(-6);                  % scale down so LP CVX solver works for large m
+
+gx = x - 5; % one-sided signed distance since we only care about overflowing and x will never be <0

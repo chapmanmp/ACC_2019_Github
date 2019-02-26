@@ -1,0 +1,9 @@
+Date: September 9, 2018
+
+Ran Main_DynProgram_Pond.m
+
+m = 6;                           % soft-max parameter
+
+beta = 10^(-2);                  % scale down so LP CVX solver works for large m
+
+gx = x - 5;                      % one-sided signed distance since we only care about overflowing and x will never be <0

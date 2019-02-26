@@ -1,0 +1,11 @@
+Date: September 9, 2018
+
+Ran Main_MonteCarlo_pond.m
+
+standard deviation of added noise = 10^(-12)
+
+nt = 1 million
+
+type_sum = 0
+
+signed distance function = x - 5

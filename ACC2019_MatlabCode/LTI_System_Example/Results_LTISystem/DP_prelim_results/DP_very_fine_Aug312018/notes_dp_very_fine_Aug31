@@ -1,0 +1,22 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+AUTHOR: Margaret Chapman
+DATE: August 31, 2018
+DESCRIPTION: Notes on Ji_dp_very_fine_Aug31.fig
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+-System: x_k+1 = x_k + u_k + w_k, for k = 0, 1
+-Disturbance: w_k \in {-1, 0, 1}, equally probable
+-Control input: u_k \in {-1, 1} for most states
+-Constraint set: K = (2,4)
+-Signed distance function for K: g(x) = |x-3|-1
+-Stage cost: c(x) = exp(g(x))
+-J0_DP_dx_one_tenth_Aug30.fig shows approximation to J_0(x,y) := min_pi CVaR_y[ c(x0) + c(x1) + c(x2) | x0 = x, pi ].
+-The computation is done via dynamic programming backup, which is essentially,
+    J_k(x,y) = min_u { c(x) + max_R { E[ R * J_k+1(x_k+1, yR) | x, y, u ] : R lives in particular set } }
+-J1 and J2 are the intermediary value functions
+-Used method of Chow NIPS 2015 to interpolate over y
+-Used linear interpolation to deal with continuous state space
+-x \in {1, 1.05, 1.1, ..., 4.9, 4.95, 5}, discretized states (dx = 0.05)
+-y \in {0.999, 0.975, 0.95, ..., 0.075, 0.05, 0.025, 0.001}, discretized confidence levels 
+(spacing = 0.025 for most)
+

@@ -1,0 +1,11 @@
+Date: September 10, 2018
+
+Running Main_DynProgram_Pond.m
+
+m = 10
+
+ws, P more accurate based on design storm
+
+beta = 10^(-3)
+
+signed distance: x-5

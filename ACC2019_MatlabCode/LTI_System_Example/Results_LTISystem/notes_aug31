@@ -1,0 +1,22 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+AUTHOR: Margaret Chapman
+DATE: August 31, 2018
+DESCRIPTION: Notes on "brute_force_computation_LTI", "dynamic_programming_LTI"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Computes J0(x,y) := min_pi CVaR_y[ exp(g(x0)) + ... + exp(g(xN)) | x0 = x, pi ] via ...
+
+1) Enumeration
+-"brute_force_computation_LTI" results generated using script, Main_BruteForce.m
+
+2) Dynamic programming
+-"dynamic_programming_LTI" results generated using script, Main_DynProgram.m
+-CVaR Bellman recursion & interpolation over y proposed by Chow et al., NIPS, 2015
+
+-Signed distance function for K: g(x) = |x-3|-1
+
+-Grid, constraint set, probability distribution, etc. provided in Setup_LTI_Dynamics.m
+
+-Linear time-invariant system: xk+1 = xk + uk + wk, for k = 0, 1; wk \in {-1, 0, 1}, xk \in Reals, uk \in {-1, 1}
+
+
